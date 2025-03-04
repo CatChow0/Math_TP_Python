@@ -40,8 +40,8 @@ def afficher_oiseau(a, l1):    # a = alpha || l1 = longeur en cm
     plt.show()
 
 # Etape 3.1
-def afficher_balles_multiples(l1):
-    alphas = np.linspace(0, np.pi/2, 11)  # 11 valeurs d'alpha entre 0 et π/2
+def afficher_balles_multiples(l1, nombres_balles):
+    alphas = np.linspace(0, np.pi/2, nombres_balles)  # 11 valeurs d'alpha entre 0 et π/2
 
     plt.figure()
     for alpha in alphas:
@@ -62,6 +62,7 @@ def afficher_balles_multiples(l1):
 
 #alpha_joueur_degres = float(input("Choisissez la valeur de l'angle alpha (en degrés) : "))
 l1_joueur = float(input("Choisissez la longueur d'étirement du ressort (en cm) : "))
+nombre_balles = int(input("Choisissez le nombre de balles à afficher : "))
 print(f"Vous avez choisi l1 = {l1_joueur} cm")
 
 #print(f"Vous avez choisi alpha = {alpha_joueur_degres}° et l1 = {l1_joueur} cm")
@@ -71,4 +72,4 @@ print(f"Vous avez choisi l1 = {l1_joueur} cm")
 ### Affichage des résultats
 
 #afficher_oiseau(alpha_joueur, l1_joueur)
-afficher_balles_multiples(l1_joueur)
+afficher_balles_multiples(l1_joueur, nombre_balles)
